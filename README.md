@@ -9,5 +9,9 @@ This is a simple application using react-query, redux-toolkit, tailwindcss, and 
 - run: npm install, if it doesn´t work, try: npm install --force
 - run: npm run dev
 
+## TESTING
+- you can run test using: npm run test
+- ensure dev dependencies are installed
+
 ### Created by
 MonkeyDeveloper (Javier Fray)
