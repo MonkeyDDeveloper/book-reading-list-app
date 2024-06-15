@@ -27,7 +27,7 @@ export default function BookCard(props: { bookInfo: IBook, removeButton?: boolea
     const footerButton = props.removeButton ? removeButton : addButton
 
     return (
-        <article className="w-full m-2 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:focus:shadow-slate-300 dark:hover:shadow-slate-300 dark:bg-gray-800 dark:border-gray-700">
+        <article role="bookCard" className="w-full m-2 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:focus:shadow-slate-300 dark:hover:shadow-slate-300 dark:bg-gray-800 dark:border-gray-700">
             <a className="flex justify-center my-3">
                 <img className="rounded-t-lg w-[80%]" src={bookInformation.cover} loading="lazy" />
             </a>
