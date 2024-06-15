@@ -1,5 +1,3 @@
-import { useSelector } from "react-redux"
-import type { RootState } from '../../app/store'
 import BookCard from "./BookCard"
 import { motion } from "framer-motion"
 import type { IBook } from "../interfaces"
