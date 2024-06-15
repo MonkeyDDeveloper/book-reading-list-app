@@ -1,5 +1,6 @@
 # Reading List App
 This is a simple application using react-query, redux-toolkit, tailwindcss, and typescript.
+you can find the demo here: https://book-reading-list-app.vercel.app/
 
 ## RUN LOCALLY
 - use node 20.12.2
