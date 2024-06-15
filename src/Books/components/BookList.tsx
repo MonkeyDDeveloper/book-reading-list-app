@@ -1,14 +1,11 @@
 import BookCard from "./BookCard"
-import { useSelector } from "react-redux"
-import { RootState } from "../../app/store"
 import { motion } from "framer-motion"
+import { IBook } from "../interfaces"
+import type { filterState } from "../features/Filters/filterSlice"
 
-export default function BookList() {
+export default function BookList({ books, readingList, filter }: { books: IBook[], readingList: string[], filter: filterState}) {
 
-    const allBooks = useSelector((state: RootState) => state.allBooks)
-    const readingList = useSelector((state: RootState) => state.readingList)
-    const filter = useSelector((state: RootState) => state.filter)
-    const booksToShow = allBooks.books.filter((book) => {
+    const booksToShow = books.filter((book) => {
         for(const key in filter) {
             if(key === "title") {
                 const testTitle = new RegExp(filter[key]).test(book.title)
@@ -47,7 +44,7 @@ export default function BookList() {
                                             whileInView={{ x: 0, rotate: 0 }}
                                             transition={{ duration: 0.3 }}
                                         >
-                                            <BookCard bookInfo={book} addedToList={readingList.books.includes(book.ISBN)}/>
+                                            <BookCard bookInfo={book} addedToList={readingList.includes(book.ISBN)}/>
                                         </motion.div>
                                     )
                                 })
