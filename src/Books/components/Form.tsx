@@ -23,7 +23,7 @@ export default function Form() {
     }
 
     return (
-        <section className="my-1 px-2 py-1 md:p-3 md:px-4 md:my-0 md:mt-5">
+        <section className="w-full my-1 px-2 py-1 md:p-3 md:px-4 md:my-0 md:mt-5">
             <form>
                 <article className="mb-2">
                     <input onChange={handleChange} type="text" id="title" name="title" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Busca por título" required />
