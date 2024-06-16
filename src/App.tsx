@@ -1,6 +1,8 @@
 import { useToast } from "@chakra-ui/react"
 import Books from "./Books/Books"
 import { useEffect } from "react"
+import AddBookToast from "./utils/components/AddBookToast"
+import RemoveBookToast from "./utils/components/RemoveBookToast"
 
 
 export default function App() {
@@ -9,22 +11,15 @@ export default function App() {
 
   const notifyToastAdd = () => {
     toast({
-      title: "Libro agregado a la lista de lectura",
-      description: "Si miras hasta el final podrás revisar todos los libros que has añadido!",
-      status: "success",
-      duration: 2000,
       isClosable: true,
-      icon: ""
+      render: () => <AddBookToast />
     })
   }
 
   const notifyToastRemove = () => {
     toast({
-      title: "Libro eliminado de la lista de lectura",
-      status: "warning",
-      duration: 2000,
-      isClosable: true,
-      icon: ""
+      duration: 3000,
+      render: () => <RemoveBookToast />
     })
   }
 
