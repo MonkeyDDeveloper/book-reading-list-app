@@ -11,6 +11,7 @@ export default function App() {
 
   const notifyToastAdd = () => {
     toast({
+      duration: 1500,
       isClosable: true,
       render: () => <AddBookToast />
     })
@@ -18,7 +19,7 @@ export default function App() {
 
   const notifyToastRemove = () => {
     toast({
-      duration: 3000,
+      duration: 1500,
       render: () => <RemoveBookToast />
     })
   }
