@@ -21,13 +21,16 @@ export default function BookBody({ isLoading, isError }: { isLoading: boolean, i
         const readingListContent = !isLoading && !isError ? readingListGrid : null
 
         return (
-            <main className="grid grid-cols-1 md:grid-cols-[20%_80%]">
-                <Form />
-                {bookListContent}
-                <section id="readingList" className="bg-gradient-to-b md:bg-gradient-to-br from-gray-900 to-90% to-gray-800 md:col-span-2">
-                    {readingListContent}
-                </section>
-            </main>
+            <>
+                <p className="p-2 text-xs text-gray-400 font-bold">Esta aplicación es un demo donde tienes una lista de libros definida, puedes filtrarlos con el formulario de busqueda, y agregar/quitar libros de tu lista de lectura para verlos en la sección de "Tu lista de lectura", así que, siente libre de testear la aplicación!</p>
+                <main className="grid grid-cols-1 md:grid-cols-[20%_80%]">
+                    <Form />
+                    {bookListContent}
+                    <section id="readingList" className="bg-gradient-to-b md:bg-gradient-to-br from-gray-900 to-90% to-gray-800 md:col-span-2">
+                        {readingListContent}
+                    </section>
+                </main>
+            </>
         )
     }
 
