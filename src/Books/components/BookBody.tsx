@@ -21,14 +21,10 @@ export default function BookBody({ isLoading, isError }: { isLoading: boolean, i
         const readingListContent = !isLoading && !isError ? readingListGrid : null
 
         return (
-            <main className="md:grid md:grid-cols-[20%_80%]">
-                <section>
-                    <Form />
-                </section>
-                <section>
-                    {bookListContent}
-                </section>
-                <section className="col-span-2">
+            <main className="grid grid-cols-1 md:grid-cols-[20%_80%]">
+                <Form />
+                {bookListContent}
+                <section className="md:col-span-2">
                     {readingListContent}
                 </section>
             </main>
