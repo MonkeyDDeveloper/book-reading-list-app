@@ -24,7 +24,7 @@ export default function BookBody({ isLoading, isError }: { isLoading: boolean, i
             <main className="grid grid-cols-1 md:grid-cols-[20%_80%]">
                 <Form />
                 {bookListContent}
-                <section className="md:col-span-2">
+                <section className="bg-gradient-to-b md:bg-gradient-to-br from-gray-900 to-90% to-gray-800 md:col-span-2">
                     {readingListContent}
                 </section>
             </main>

@@ -13,7 +13,7 @@ export default function ReadingList({ books, readingList }: { books: IBook[], re
     </section>
 
     const renderReadingList = () => {
-        if (books.length === 0) {
+        if (readingList.length === 0) {
             return <p className="text-md font-bold p-2">No hay libros en tu lista de lectura...</p>
         }
         return readingListGrid
@@ -21,7 +21,7 @@ export default function ReadingList({ books, readingList }: { books: IBook[], re
 
     return (
         <>
-            <h2 className="p-2 text-2xl font-bold">Tu lista de lectura</h2>
+            <h2 className="p-2 text-2xl font-bold text-[#F6AA1C]">Tu lista de lectura</h2>
             {
                 renderReadingList()
             }

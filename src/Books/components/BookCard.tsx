@@ -23,7 +23,7 @@ export default function BookCard(props: { bookInfo: IBook, removeButton?: boolea
 
     const removeButton = <a onClick={(e) => removeFromReadingListHandler(e, bookInformation.ISBN)} className="inline-flex w-full items-center  justify-center px-3 py-2 text-md md:text-sm font-medium text-center text-white bg-red-500 rounded-lg hover:cursor-pointer hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-blue-300 ">Quitar de la lista</a>
 
-    const addedToListMessage = <p className="text-orange-600 md:text-xs font-bold">Añadido a la lista</p>
+    const addedToListMessage = <p className="text-[#F6AA1C] md:text-xs font-bold">Añadido a la lista</p>
     const footerButton = props.removeButton ? removeButton : addButton
 
     return (
