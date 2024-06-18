@@ -11,15 +11,14 @@ export default function App() {
 
   const notifyToastAdd = () => {
     toast({
-      duration: 1500,
-      isClosable: true,
+      duration: 3000,
       render: () => <AddBookToast />
     })
   }
 
   const notifyToastRemove = () => {
     toast({
-      duration: 1500,
+      duration: 3000,
       render: () => <RemoveBookToast />
     })
   }
