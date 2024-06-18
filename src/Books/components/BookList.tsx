@@ -39,7 +39,7 @@ export default function BookList({ books, readingList, filter }: { books: IBook[
                                 key={book.ISBN}
                                 initial={{ x: -150, rotate: -10 }}
                                 whileInView={{ x: 0, rotate: 0 }}
-                                transition={{ duration: 0.3 }}
+                                transition={{ duration: 0.5 }}
                             >
                                 <BookCard bookInfo={book} addedToList={readingList.includes(book.ISBN)} />
                             </motion.div>
