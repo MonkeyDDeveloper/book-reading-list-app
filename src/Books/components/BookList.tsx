@@ -32,8 +32,7 @@ export default function BookList({ books, readingList, filter }: { books: IBook[
             <h2 className="p-2 text-xl text-[#F6AA1C] font-bold md:text-2xl">Libros disponibles</h2>
             <section className="grid grid-cols-1 justify-items-center sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
                 {
-                    booksToShow.map((book, i) => {
-                        const loadLazy = window.innerWidth <= 768 && i > 1
+                    booksToShow.map((book, _i) => {
                         return (
                             <motion.div
                                 className="w-full p-2 flex justify-center"
