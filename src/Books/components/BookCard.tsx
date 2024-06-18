@@ -29,7 +29,7 @@ export default function BookCard(props: { bookInfo: IBook, removeButton?: boolea
     return (
         <article role="bookCard" className="w-full m-2 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:focus:shadow-slate-300 dark:hover:shadow-slate-300 dark:bg-gray-800 dark:border-gray-700">
             <a className="flex justify-center my-3">
-                <img className="rounded-t-lg w-[80%]" src={bookInformation.cover} loading="lazy" />
+                <img className="rounded-t-lg w-[80%]" src={bookInformation.cover} width="150px" height="auto" loading="lazy" />
             </a>
             <header className="mb-1 px-3">
                 <a>
