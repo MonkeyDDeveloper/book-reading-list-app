@@ -36,7 +36,7 @@ export default function BookCard(props: { bookInfo: IBook, removeButton?: boolea
                     <h2 className="mb-2 text-2xl md:text-sm font-bold tracking-tight text-gray-900 dark:text-white">{bookInformation.title}</h2>
                 </a>
                 <a>
-                    <h3 className="mb-2 text-lg md:text-sm font-bold tracking-tight text-gray-500 dark:text-gray-500">{bookInformation.author.name}</h3>
+                    <h3 className="mb-2 text-lg md:text-sm font-bold tracking-tight text-gray-300 dark:text-gray-300">{bookInformation.author.name}</h3>
                 </a>
             </header>
             <p className="sm:hidden mb-3 px-3 font-normal text-gray-700 dark:text-gray-400">{bookInformation.synopsis}</p>
