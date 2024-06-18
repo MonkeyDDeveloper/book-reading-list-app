@@ -32,12 +32,8 @@ export default function BookCard(props: { bookInfo: IBook, removeButton?: boolea
                 <img className="rounded-t-lg w-[80%]" src={bookInformation.cover} width="150" height="84" alt={bookInformation.title} loading="lazy" />
             </section>
             <header className="mb-1 px-3">
-                <a>
-                    <h2 className="mb-2 text-2xl md:text-sm font-bold tracking-tight text-gray-900 dark:text-white">{bookInformation.title}</h2>
-                </a>
-                <a>
-                    <h3 className="mb-2 text-lg md:text-sm font-bold tracking-tight text-gray-300 dark:text-gray-300">{bookInformation.author.name}</h3>
-                </a>
+                <h2 className="mb-2 text-2xl md:text-sm font-bold tracking-tight text-gray-900 dark:text-white">{bookInformation.title}</h2>
+                <h3 className="mb-2 text-lg md:text-sm font-bold tracking-tight text-gray-300 dark:text-gray-300">{bookInformation.author.name}</h3>
             </header>
             <p className="sm:hidden mb-3 px-3 font-normal text-gray-700 dark:text-gray-400">{bookInformation.synopsis}</p>
             <footer className="p-3">
