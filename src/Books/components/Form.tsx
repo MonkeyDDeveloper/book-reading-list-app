@@ -29,7 +29,7 @@ export default function Form() {
                     <input onChange={handleChange} type="text" id="title" name="title" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Busca por título" required />
                 </article>
                 <article className="mb-2">
-                    <label htmlFor="genre" className="text-sm text-gray-300 font-bold dark:text-gray-300">Filtrar por Género</label>
+                    <label htmlFor="category" className="text-sm text-gray-300 font-bold dark:text-gray-300">Filtrar por Género</label>
                     <select onChange={handleChange} defaultValue="" id="category" name="genre" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option value="">Todas las categorías</option>
                         {

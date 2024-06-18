@@ -11,6 +11,7 @@ function addPreloadTags(bookCoverUrl: string) {
     link.rel = 'preload';
     link.as = 'image';
     link.href = bookCoverUrl;
+    link.type = "image/jpg"
     document.head.appendChild(link);
 }
 
@@ -24,9 +25,13 @@ export default function Books() {
     })
 
     if(!query.isLoading && query.isSuccess) {
-        const books = query.data.default.library.map(({book}) => {
+        const books = query.data.default.library.map(({book}, i) => {
             
-            addPreloadTags(book.cover)
+            if(i == 0) {
+
+                addPreloadTags(book.cover)
+
+            }
 
             return book
         })
