@@ -6,6 +6,14 @@ import BookHeader from "./components/Header"
 import { addBooks } from "./features/AllBooks/allBooksSlice"
 import { useDispatch } from "react-redux"
 
+function addPreloadTags(bookCoverUrl: string) {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = bookCoverUrl;
+    document.head.appendChild(link);
+}
+
 export default function Books() {
     
     const dispatch = useDispatch()
@@ -16,7 +24,12 @@ export default function Books() {
     })
 
     if(!query.isLoading && query.isSuccess) {
-        const books = query.data.default.library.map(({book}) => book)
+        const books = query.data.default.library.map(({book}) => {
+            
+            addPreloadTags(book.cover)
+
+            return book
+        })
         dispatch(addBooks(books))
     }
 

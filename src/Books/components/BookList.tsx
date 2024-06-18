@@ -42,7 +42,7 @@ export default function BookList({ books, readingList, filter }: { books: IBook[
                                 whileInView={{ x: 0, rotate: 0 }}
                                 transition={{ duration: 0.5 }}
                             >
-                                <BookCard bookInfo={book} addedToList={readingList.includes(book.ISBN)} imgLoadLazy={loadLazy}/>
+                                <BookCard bookInfo={book} addedToList={readingList.includes(book.ISBN)} imgLoadLazy={true}/>
                             </motion.div>
                         )
                     })
